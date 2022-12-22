@@ -1,11 +1,11 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
     // Verify attribute types during obj creation
-    if (name.constructor !== String) throw TypeError('name must be a string');
-    if (length.constructor !== Number) throw TypeError('length must be a number');
-    if (students.constructor !== Array) throw TypeError('students must be an array of strings');
+    if (Object.getPrototypeOf(name) !== String.prototype) throw TypeError('name must be a string');
+    if (Object.getPrototypeOf(length) !== Number.prototype) throw TypeError('length must be a number');
+    if (Object.getPrototypeOf(students) !== Array.prototype) throw TypeError('students must be an array of strings');
     students.forEach((student) => {
-      if (student.constructor !== String) throw TypeError('students must be an array of strings');
+      if (Object.getPrototypeOf(student) !== String.prototype) throw TypeError('students must be an array of strings');
     });
 
     // Create objs
@@ -14,26 +14,24 @@ export default class HolbertonCourse {
     this._students = students;
   }
 
-
   // Setters
-  set name(name) {
-    if (name.constructor !== String) throw TypeError('name must be a string');
-    this._name = name;
+  set name(newName) {
+    if (Object.getPrototypeOf(newName) !== String.prototype) throw TypeError('name must be a string');
+    this._name = newName;
   }
 
   set length(newLen) {
-    if (length.constructor !== Number) throw TypeError('length must be a number');
+    if (Object.getPrototypeOf(newLen) !== Number.prototype) throw TypeError('length must be a number');
     this._length = newLen;
   }
 
   set students(newStudents) {
-    if (students.constructor !== Array) throw TypeError('students must be an array of strings');
-    students.forEach((student) => {
-      if (student.constructor !== String) throw TypeError('students must be an array of strings');
+    if (Object.getPrototypeOf(newStudents) !== Array.prototype) throw TypeError('students must be an array');
+    newStudents.forEach((student) => {
+      if (Object.getPrototypeOf(student) !== String.prototype) throw TypeError('students must be an array of strings');
     });
     this._students = newStudents;
   }
-
 
   // Getters
 

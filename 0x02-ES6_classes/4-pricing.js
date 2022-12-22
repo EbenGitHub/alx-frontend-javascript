@@ -12,6 +12,7 @@ class Pricing {
   }
 
   set currency(newCurrency) {
+    if (!(newCurrency instanceof Currency)) throw TypeError('current must be an instance of Currency');
     this._currency = newCurrency;
   }
 
@@ -29,7 +30,7 @@ class Pricing {
     return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
-  convertPrice(amount, conversionRate) {
+  static convertPrice(amount, conversionRate) {
     return `${amount * conversionRate}`;
   }
 }

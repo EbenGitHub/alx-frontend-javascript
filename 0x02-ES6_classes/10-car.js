@@ -1,10 +1,15 @@
-class Car {
-  // Construct obj
+export default class Car {
   constructor(brand, motor, color) {
     this._brand = brand;
     this._motor = motor;
     this._color = color;
   }
 
-  // Methods
+  static get [Symbol.species]() {
+    return this;
+  }
+
+  cloneCar() {
+    return new this.constructor[Symbol.species]();
+  }
 }

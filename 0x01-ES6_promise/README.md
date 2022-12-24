@@ -4,7 +4,8 @@
 
 
 
-0. Keep every promise you make and only make promises you can keep `mandatory`
+> 0. Keep every promise you make and only make promises you can keep `mandatory`
+######
 Return a Promise using this prototype ```function getResponseFromAPI()```
 ```bash
 bob@dylan:~$ cat 0-main.js
@@ -46,11 +47,11 @@ test("getResponseFromAPI returns a promise", () => {
   npx eslint <file_name>
   ```
   
-  ###
-  ###
+  #
+&nbsp;
   
-  
-  1. Don't make a promise...if you know you can't keep it `mandatory`
+ > 1. Don't make a promise...if you know you can't keep it `mandatory`
+  ######
 Using the prototype below, return a ```promise```. The parameter is a ```boolean```
 ```
 getFullResponseFromAPI(success)

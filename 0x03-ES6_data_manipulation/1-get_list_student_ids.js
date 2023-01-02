@@ -1,4 +1,4 @@
-export default function getListStudentIds(obj) {
-  if (obj.constructor !== Array) return [];
-  return obj.map((student) => student.id);
+export default function getListStudentIds(getListStudents) {
+  if (getListStudents.constructor !== Array) return [];
+  return getListStudents.map((student) => student.id);
 }

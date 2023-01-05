@@ -7,15 +7,15 @@ interface Student {
 
 const student1: Student = {
   firstName: 'Harry',
-  lastName: 'Potter'
+  lastName: 'Potter',
   age: 20,
   location: 'Hogwarts Gryffindor'
 }
 
 const student2: Student = {
-  firstName: 'Ron'
-  lastName: 'Weasley'
-  age: 17
+  firstName: 'Ron',
+  lastName: 'Weasley',
+  age: 17,
   location: 'Hogwarts Slytherin'
 }
 
@@ -45,7 +45,7 @@ thead.append(th2);
 table.append(thead);
 
 
-studentList.forEach((student) => {
+studentsList.forEach((student) => {
   const row: HTMLTableRowElement = document.createElement('tr');
 
   const column1: HTMLTableCellElement = document.createElement('td');

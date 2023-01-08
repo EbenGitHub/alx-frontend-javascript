@@ -1,14 +1,14 @@
 var student1 = {
-    firstName: 'Harry',
-    lastName: 'Potter',
-    age: 20,
-    location: 'Hogwarts Gryffindor'
+    firstName: 'Mathew',
+    lastName: 'Brad',
+    age: 35,
+    location: 'California, USA'
 };
 var student2 = {
-    firstName: 'Ron',
-    lastName: 'Weasley',
-    age: 17,
-    location: 'Hogwarts Slytherin'
+    firstName: 'David',
+    lastName: 'Schapiro',
+    age: 62,
+    location: 'New Jersy, USA'
 };
 var studentsList = [student1, student2];
 var body = document.getElementsByTagName("body")[0];

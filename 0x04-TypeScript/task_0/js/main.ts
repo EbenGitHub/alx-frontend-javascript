@@ -5,22 +5,21 @@ interface Student {
   location: string
 }
 
-const student1: Student = {
-  firstName: 'Harry',
-  lastName: 'Potter',
-  age: 20,
-  location: 'Hogwarts Gryffindor'
+let student1: Student = {
+  firstName: 'Mathew',
+  lastName: 'Brad',
+  age: 35,
+  location: 'California, USA'
 }
 
-const student2: Student = {
-  firstName: 'Ron',
-  lastName: 'Weasley',
-  age: 17,
-  location: 'Hogwarts Slytherin'
+let student2: Student = {
+  firstName: 'David',
+  lastName: 'Schapiro',
+  age: 62,
+  location: 'New Jersy, USA'
 }
 
-const studentsList: Array<Student> = [student1, student2];
-
+let studentsList: Student[] = [student1, student2]
 
 const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
 const table: HTMLTableElement = document.createElement('table');
